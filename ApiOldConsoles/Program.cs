@@ -17,7 +17,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddCors(options=>
 {
-    options.AddPolicy("AllowCrossOringin", policy=>
+    options.AddPolicy("AllowCrossOrigin", policy=>
     {
         policy.AllowAnyOrigin()
         .AllowAnyMethod()
@@ -27,7 +27,7 @@ builder.Services.AddCors(options=>
 
 var app = builder.Build();
 
-app.UseCors("AllowCrossOringin");
+app.UseCors("AllowCrossOrigin");
 
 using (var scope = app.Services.CreateScope())
 {
